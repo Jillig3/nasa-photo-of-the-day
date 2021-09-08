@@ -15,7 +15,7 @@ export default function Header () {
     }, [])
 
     return (
-        <div>
+        <div className = 'AppHeader'>
             <h1>  {title} </h1>
         </div>
     );

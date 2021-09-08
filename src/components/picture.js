@@ -36,7 +36,7 @@ export default function Picture () {
     }, [])
 
     return (
-        <div>
+        <div className = 'App'>
             <img src={pic} alt="space picture"/>
             <h3>{date}</h3>
             <p>{info}</p>
