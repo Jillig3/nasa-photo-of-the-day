@@ -6,7 +6,7 @@ export default function Header () {
     const [ title, setTitle ] = useState('')
 
     useEffect(() => {
-        axios.get(`${BASE_URL} ${API_KEY}`)
+        axios.get(`${BASE_URL}?api_key=${API_KEY}`)
         .then(resp => {
             setTitle(resp.data.title)
         }) .catch(err => {
@@ -16,7 +16,7 @@ export default function Header () {
 
     return (
         <div>
-            <h1> `${title}`</h1>
+            <h1>  {title} </h1>
         </div>
     );
 }
