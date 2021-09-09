@@ -1,6 +1,18 @@
 import React, { useState, useEffect }from "react";
 import { BASE_URL, API_KEY } from "../constants/index";
 import axios from 'axios';
+import styled from 'styled-components';
+
+
+const StyledHeader = styled.div `
+    h1 {
+        color: #008080;
+    }
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background-color: orange;
+    }
+`
 
 export default function Header () {
     const [ title, setTitle ] = useState('')
@@ -15,8 +27,8 @@ export default function Header () {
     }, [])
 
     return (
-        <div className = 'AppHeader'>
+        <StyledHeader>
             <h1>  {title} </h1>
-        </div>
+        </StyledHeader>
     );
 }
